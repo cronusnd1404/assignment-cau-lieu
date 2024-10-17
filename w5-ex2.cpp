@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-// Hàm kiểm tra số nguyên tố
+// Ham kiem tra so nguyen to
 int is_prime(int n) {
     if (n <= 1) return 0;
     for (int i = 2; i <= sqrt(n); i++) {
@@ -10,7 +10,7 @@ int is_prime(int n) {
     return 1;
 }
 
-// Hàm kiểm tra số Blum
+// Ham kiem tra so Blum
 int is_blum_number(int n) {
     for (int i = 2; i <= sqrt(n); i++) {
         if (n % i == 0 && is_prime(i) && (i % 4 == 3)) {
@@ -23,7 +23,7 @@ int is_blum_number(int n) {
     return 0;
 }
 
-// Tạo mảng số Blum nhỏ hơn N
+// Tao mang so Blum nho hon N
 int generate_blum_numbers(int blum_numbers[], int N) {
     int count = 0;
     for (int i = 6; i < N; i++) {
@@ -34,9 +34,9 @@ int generate_blum_numbers(int blum_numbers[], int N) {
     return count;
 }
 
-// Tìm cặp số Blum có tổng cũng là số Blum
+// Tim cap so Blum co tong cung la so Blum
 void find_blum_pairs(int blum_numbers[], int count, int N) {
-    printf("Các cặp số Blum có tổng cũng là số Blum: ");
+    printf("Cac cap so Blum co tong cung la so Blum: ");
     int found = 0;
     for (int i = 0; i < count; i++) {
         for (int j = i + 1; j < count; j++) {
@@ -48,13 +48,13 @@ void find_blum_pairs(int blum_numbers[], int count, int N) {
         }
     }
     if (!found) {
-        printf("Không có cặp nào.\n");
+        printf("Khong co cap nao.\n");
     } else {
         printf("\n");
     }
 }
 
-// Kiểm tra sự tồn tại của số Blum M trong dãy
+// Kiem tra su ton tai cua so Blum M trong day
 int check_blum_existence(int M, int blum_numbers[], int count) {
     for (int i = 0; i < count; i++) {
         if (blum_numbers[i] == M) {
@@ -68,16 +68,16 @@ int main() {
     int N = 100;
     int blum_numbers[100];
     int count = generate_blum_numbers(blum_numbers, N);
-    printf("Mảng số Blum nhỏ hơn %d: ", N);
+    printf("Mang so Blum nho hon %d: ", N);
     for (int i = 0; i < count; i++) {
         printf("%d ", blum_numbers[i]);
     }
     printf("\n");
     int M = 33;
     if (check_blum_existence(M, blum_numbers, count)) {
-        printf("Số Blum %d tồn tại trong mảng.\n", M);
+        printf("So Blum %d ton tai trong mang.\n", M);
     } else {
-        printf("Số Blum %d không tồn tại trong mảng.\n", M);
+        printf("So Blum %d khong ton tai trong mang.\n", M);
     }
     find_blum_pairs(blum_numbers, count, N);
     return 0;
