@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+using namespace std;
 void dutch_national_flag_sort(int arr[], int n) {
     int low = 0, mid = 0, high = n - 1;
     while (mid <= high) {
