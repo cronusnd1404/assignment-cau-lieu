@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-c
 // Ham kiem tra so nguyen to
 int is_prime(int n) {
     if (n <= 1) return 0;
