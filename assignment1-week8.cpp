@@ -171,6 +171,7 @@ void xoaSinhVienCungNgaySinh(List &l) {
     l.last = prev;  // Cập nhật l.last sau khi xóa
 }
 
+
 int main() {
     List l;
     khoiTaoList(l);
