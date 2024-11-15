@@ -3,11 +3,11 @@
 #include <string>
 using namespace std;
 
-// Dinh nghia cau truc cho mot thanh go
+// dinh nghia thanh go
 struct Wood {
-    string type;  // Loai go
-    double size;  // Kich thuoc
-    int age;      // Tuoi
+    string type;  
+    double size;
+    int age;      
 
     // Constructor cho struct Wood
     Wood(string t, double s, int a) : type(t), size(s), age(a) {}
