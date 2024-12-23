@@ -54,21 +54,23 @@ AVLNode* balance(AVLNode* node) {
     updateHeight(node);
     int balanceFactor = getBalanceFactor(node);
 
+    // Left-heavy case
     if (balanceFactor > 1) {
         if (getBalanceFactor(node->left) < 0) {
-            node->left = rotateLeft(node->left);
+            node->left = rotateLeft(node->left); // Left-Right case
         }
-        return rotateRight(node);
+        return rotateRight(node); // Left-Left case
     }
 
+    // Right-heavy case
     if (balanceFactor < -1) {
         if (getBalanceFactor(node->right) > 0) {
-            node->right = rotateRight(node->right);
+            node->right = rotateRight(node->right); // Right-Left case
         }
-        return rotateLeft(node);
+        return rotateLeft(node); // Right-Right case
     }
 
-    return node;
+    return node; // Balanced
 }
 
 AVLNode* insert(AVLNode* node, int key) {
@@ -105,7 +107,7 @@ void printPreOrder(AVLNode* root) {
 
 int main() {
     AVLNode* root = nullptr;
-    int keys[] = {10, 20, 30, 40, 50, 25};
+    int keys[] = {10, 20, 30, 40,60, 50, 25};
 
     cout << "Insertion steps with AVL tree balancing:\n";
     for (int key : keys) {
