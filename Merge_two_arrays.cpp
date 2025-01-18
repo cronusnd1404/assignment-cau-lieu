@@ -107,6 +107,20 @@ int main() {
     }
     cout << endl;
 
+/* ví dụ output
+Nhap kich thuoc m (so phan tu cua X): 4
+Nhap kich thuoc n (so phan tu cua Y): 2
+
+Nhap 2 phan tu da sap xep cho X:
+123 13
+
+Nhap 2 phan tu da sap xep cho Y:
+33 34
+
+Mang X sau khi gop:
+123 13 33 34
+*/ 
+
     // 7) Giải phóng bộ nhớ
     delete[] X;
     delete[] Y;
