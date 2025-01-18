@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
- * BÀI TOÁN:
+ * BÀI TOÁN: Merge two arrays by satisfying given constraints
  * -----------
  * Cho hai mảng X[] và Y[] đã được sắp xếp tăng dần.
  * Giả sử:
