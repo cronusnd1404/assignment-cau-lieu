@@ -1,4 +1,0 @@
-This is a test message for AES and DES encryption and decryption.
-
-123456789
-End of test.
