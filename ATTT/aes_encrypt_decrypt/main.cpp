@@ -1,5 +1,4 @@
 #include "aes_wrapper.h"
-#include <iostream>
 
 int main() {
     const uint8_t key[16] = {
@@ -12,3 +11,4 @@ int main() {
 
     return 0;
 }
+// Chuyển đổi file input.txt thành file encrypted.txt bằng AES với key đã cho

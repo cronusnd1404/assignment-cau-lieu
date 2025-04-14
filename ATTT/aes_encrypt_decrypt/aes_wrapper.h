@@ -8,3 +8,4 @@ void encryptAES(const std::string& inputFile, const std::string& outputFile, con
 void decryptAES(const std::string& inputFile, const std::string& outputFile, const uint8_t key[16]);
 
 #endif
+// AES_WRAPPER_H
